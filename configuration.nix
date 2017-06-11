@@ -113,10 +113,12 @@
   # '';
 
   # Keep system up-to-date automatically.
-  system.autoUpgrade.enable = true;
+  system.autoUpgrade.enable = false;
 
   # Extra system packages.
   environment.systemPackages = with pkgs; [
+    bluez
+    bluedevil
     cryptsetup
     deluge
     emacs
@@ -125,7 +127,6 @@
     firefox
     git
     gparted
-    kdeApplications.dolphin-plugins
     kdeconnect
     keepassx2
     mercurial
