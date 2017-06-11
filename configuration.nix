@@ -118,7 +118,6 @@
   # Extra system packages.
   environment.systemPackages = with pkgs; [
     bluez
-    bluedevil
     cryptsetup
     deluge
     emacs
@@ -141,6 +140,7 @@
     openvpn
     powerline-fonts
     source-code-pro
+    spectacle
     stow
     redshift
     redshift-plasma-applet
@@ -209,8 +209,8 @@
       plasma5.enable = true;
       plasma5.extraPackages = with pkgs; [
         yakuake
-        spectacle
         dolphin
+        khelpcenter
       ];
     };
 
