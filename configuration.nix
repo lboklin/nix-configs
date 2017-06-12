@@ -117,6 +117,7 @@
 
   # Extra system packages.
   environment.systemPackages = with pkgs; [
+    ark
     bluez
     cryptsetup
     deluge
