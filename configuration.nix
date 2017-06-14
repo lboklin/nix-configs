@@ -73,11 +73,14 @@
   # Networking, yes please.
   networking.networkmanager.enable = true;
 
+
   hardware = {
-    # I want audio control.
-    pulseaudio.enable = true;
-    # and with 32-bit support
-    pulseaudio.support32Bit = true;
+    pulseaudio = {
+      enable = true;
+      systemWide = true;
+      support32Bit = true;
+      package = pkgs.pulseaudioFull;
+    };
     # Enable hardware acceleration for 32-bit applications on a 64-bit system.
     opengl.driSupport32Bit = true;
     bluetooth.enable = true;
@@ -118,11 +121,10 @@
   # Extra system packages.
   environment.systemPackages = with pkgs; [
     ark
-    bluez
     cryptsetup
     deluge
-    emacs
     electron
+    emacs
     filelight
     firefox
     git
@@ -140,14 +142,15 @@
     okular
     openvpn
     powerline-fonts
-    source-code-pro
-    spectacle
-    stow
+    pulseaudioFull # Will this give me bluetooth?
     redshift
     redshift-plasma-applet
     ripgrep
     smplayer
+    source-code-pro
+    spectacle
     steam
+    stow
     tmux
     vim
     vlc
