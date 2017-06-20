@@ -13,6 +13,8 @@
 
   # Need this for graphics drivers, steam, etc.
   nixpkgs.config.allowUnfree = true;
+  # Needed by Unity3D
+  security.chromiumSuidSandbox.enable = true;
 
   # Select internationalisation properties.
   i18n = {
@@ -101,7 +103,7 @@
     mono
     mono-addins
     monodevelop
-    # unity3d # Unfree
+    unity3d # Unfree
 
     # Misc/Utils (config/admin)
     nethogs
