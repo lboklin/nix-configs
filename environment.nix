@@ -3,9 +3,9 @@
 {
   # Choose one DE/WM.
   imports = [
-    # ./kde.nix
-    ./xmonad.nix
-  ];
+    ./kde.nix
+    # ./xmonad.nix
+    ];
 
   fonts = {
     enableFontDir = true;
