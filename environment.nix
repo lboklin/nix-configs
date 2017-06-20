@@ -11,6 +11,8 @@
     enableFontDir = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
+      dejavu_fonts
+      font-awesome-ttf
       hack-font
       noto-fonts
       source-code-pro

@@ -81,6 +81,7 @@
 
     # KDE/Plasma
     kdeconnect
+    konsole
     okular
     redshift-plasma-applet
     spectacle

@@ -6,7 +6,7 @@
   services.xserver = {
     displayManager.sddm = {
       enable = true;
-      autoLogin.enable = false;
+      autoLogin.enable = true;
       autoLogin.user = "ludvig";
       autoNumlock = true;
     };
