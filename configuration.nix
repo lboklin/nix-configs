@@ -52,6 +52,7 @@
     xkbVariant = "dvorak_a5";
     xkbOptions = "caps:escape";
     enableCtrlAltBackspace = true;
+    autoRepeatDelay = 350;
 
     # Mouse.
     libinput = {
