@@ -13,6 +13,7 @@
 
   # Need this for graphics drivers, steam, etc.
   nixpkgs.config.allowUnfree = true;
+
   # Needed by Unity3D
   security.chromiumSuidSandbox.enable = true;
 
@@ -44,23 +45,6 @@
     opengl.driSupport32Bit = true;
   };
 
-  services.xserver = {
-    enable = true;
-
-    # Keyboard.
-    layout = "se";
-    xkbVariant = "dvorak_a5";
-    xkbOptions = "caps:escape";
-    enableCtrlAltBackspace = true;
-    autoRepeatDelay = 350;
-
-    # Mouse.
-    libinput = {
-      enable = true;
-      accelProfile = "flat";
-    };
-  };
-
   # Extra system packages.
   environment.systemPackages = with pkgs; [
     # Misc/General
@@ -72,7 +56,7 @@
     firefox
     gparted
     keepassx2
-    mercurial # Needed by terminal prompt plugin
+    konsole
     openvpn
     powerline-fonts
     pulseaudioFull
@@ -81,13 +65,6 @@
     source-code-pro
     steam # Unfree
     tmux
-
-    # KDE/Plasma
-    kdeconnect
-    konsole
-    okular
-    redshift-plasma-applet
-    spectacle
 
     # Dev
     darcs

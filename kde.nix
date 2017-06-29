@@ -4,6 +4,7 @@
   # Graphical environment (DE/WM)
   # Enable the X11 windowing system.
   services.xserver = {
+    enable = true;
     displayManager.sddm = {
       enable = true;
       autoLogin.enable = true;
@@ -20,4 +21,11 @@
       ];
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    kdeconnect
+    okular
+    redshift-plasma-applet
+    spectacle
+  ];
 }

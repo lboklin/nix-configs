@@ -21,6 +21,7 @@
 
   ## Shell stuff
 
+  environment.systemPackages = [ pkgs.mercurial ]; # Needed by terminal prompt vcs plugin
   environment.shells = [ pkgs.zsh ];
   environment.etc."zshrc.local".text = ''
     export ZSH_CUSTOM="${./extra}"
@@ -31,6 +32,7 @@
     export HIST_STAMPS="yyyy-mm-dd"
     export ZSH_TMUX_AUTOSTART=true
     export ZSH_TMUX_AUTOQUIT=false
+    export ZSH_TMUX_AUTOCONNECT=false
   '';
 
   programs.zsh = {
