@@ -31,6 +31,7 @@
     export HIST_STAMPS="yyyy-mm-dd"
     export ZSH_TMUX_AUTOSTART=true
     export ZSH_TMUX_AUTOQUIT=false
+    export ZSH_TMUX_AUTOCONNECT=false
   '';
 
   programs.zsh = {

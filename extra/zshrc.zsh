@@ -1,0 +1,8 @@
+alias l="ls -lphAF --group-directories-first --color"
+alias g="grep -i"
+alias prog="pushd $HOME/Projects/gamedev/Godot/Progeny/game/scripts"
+alias sagoapp="pushd $HOME/Projects/gamedev/Godot/Sagoappen/game/scripts"
+alias mgc="pushd $HOME/Projects/appdev/minigolf-companion-app/ && git status"
+alias fdc="pushd $HOME/Projects/appdev/foodcompanion/ && git status"
+alias gaacam="git add -A && git commit -am"
+alias !gaacam="git add -A && git commit --amend --no-edit -a"
