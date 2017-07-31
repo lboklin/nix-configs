@@ -8,42 +8,29 @@
 
   ## Storage devices ##
 
-  boot.loader.grub = {
-    enable = true;
-    version = 2;
-    # Define on which hard drive you want to install Grub.
-    device = "/dev/sdb"; # or "nodev" for efi only
-    useOSProber = true;
-  };
+  boot.loader.systemd-boot.enable = true;
 
-  fileSystems = {
-    "/data" = {
-      device = "/dev/disk/by-label/data";
-      fsType = "ext4";
-    };
+  services.xserver = {
+    # Keyboard.
+    layout = "se";
+    xkbVariant = "dvorak_a5";
+    xkbOptions = "caps:escape";
+    enableCtrlAltBackspace = true;
+    autoRepeatDelay = 350;
 
-    "/data/neon-home" = {
-      device = "/dev/disk/by-label/Home";
-      fsType = "ext4";
+    # Mouse.
+    libinput = {
+      enable = true;
+      accelProfile = "flat";
     };
   };
-
-  ## Graphics card ##
-
-  services.xserver.videoDrivers = [ "nvidia" ];
-  services.xserver.extraDisplaySettings = ''
-    Option         "metamodes" "DVI-D-0: 1920x1080_144 +0+0 {ForceCompositionPipeline=On}"
-  '';
-
-  ## Peripherals/Misc ##
-
-  hardware.bluetooth.enable = true;
 
   # Steam Controller
-  # This allows SC-Controller application and daemon to access Steam Controller or its USB dongle.
-  # This is done by allowing read/write access to all users. You may want to change this to something like
-  # MODE="0660", GROUP="games" to allow r/w access only to members of that group.
   services.udev.extraRules = ''
+    # This allows SC-Controller application and daemon to access Steam Controller or its USB dongle.
+    # This is done by allowing read/write access to all users. You may want to change this to something like
+    # MODE="0660", GROUP="games" to allow r/w access only to members of that group.
+
     # This rule is needed for basic functionality of the controller in Steam and keyboard/mouse emulation
     SUBSYSTEM=="usb", ATTRS{idVendor}=="28de", MODE="0666"
     # This rule is necessary for gamepad emulation
@@ -53,4 +40,6 @@
     # Valve HID devices over bluetooth hidraw
     KERNEL=="hidraw*", KERNELS=="*28DE:*", MODE="0666"
   '';
+
+  hardware.bluetooth.enable = true;
 }

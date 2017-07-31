@@ -5,9 +5,10 @@
   services = {
     # Enable the X11 windowing system.
     xserver = {
+      enable = true;
       displayManager.sddm = {
         enable = true;
-        autoLogin.enable = true;
+        # autoLogin.enable = true;
         autoLogin.user = "ludvig";
         autoNumlock = true;
       };

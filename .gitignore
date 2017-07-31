@@ -1,2 +1,3 @@
 nixpkgs
 dotfiles
+hardware-configuration.nix

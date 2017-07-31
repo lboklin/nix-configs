@@ -21,9 +21,10 @@
 
   ## Shell stuff
 
+  environment.systemPackages = [ pkgs.mercurial ]; # Needed by terminal prompt vcs plugin
   environment.shells = [ pkgs.zsh ];
   environment.etc."zshrc.local".text = ''
-    export ZSH_CUSTOM="${./extra}"
+    export ZSH_CUSTOM="${./extra/oh-my-zsh/custom}"
     export ZSH_THEME="lambdagnoster"
     export DISABLE_AUTO_UPDATE="true"
     export COMPLETION_WAITING_DOTS="true"
