@@ -68,6 +68,8 @@
     filelight
     firefox
     gparted
+    gwenview
+    kate
     keepassx2
     konsole
     openvpn
@@ -76,14 +78,29 @@
     redshift
     smplayer
     source-code-pro
+    spotify # Unfree
     steam # Unfree
+    tdesktop
     tmux
+    tree
+
+    # KDE/Plasma
+    kdeconnect
+    konsole
+    okular
+    redshift-plasma-applet
+    spectacle
 
     # Dev
+    ctags
     darcs
     git
     nodejs
     npm2nix
+    meld
+    # Haskell dev
+    cabal2nix
+    ghc
 
     # Editors/IDE's
     emacs
@@ -91,7 +108,7 @@
     vim
 
     # Work-related
-    mono
+    mono46
     mono-addins
     monodevelop
     unity3d # Unfree
