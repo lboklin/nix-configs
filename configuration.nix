@@ -11,6 +11,8 @@
     ./users.nix
   ];
 
+  boot.plymouth.enable = true;
+
   # Need this for graphics drivers, steam, etc.
   nixpkgs.config.allowUnfree = true;
 
@@ -44,6 +46,17 @@
     # Enable hardware acceleration for 32-bit applications on a 64-bit system.
     opengl.driSupport32Bit = true;
   };
+
+  services.syncthing = {
+    enable = true;
+    dataDir = /etc/nixos/extra/syncthing;
+    openDefaultPorts = true;
+    useInotify = true;
+  };
+
+  # Snowdrift dev
+  services.postgresql.enable = true;
+  services.postgresql.package = pkgs.postgresql94;
 
   # Extra system packages.
   environment.systemPackages = with pkgs; [

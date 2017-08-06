@@ -14,11 +14,11 @@
 
     desktopManager.plasma5 = {
       enable = true;
-      extraPackages = with pkgs; [
-        yakuake
-        dolphin
-        khelpcenter
-      ];
+      # extraPackages = with pkgs; [
+      #   yakuake
+      #   dolphin
+      #   khelpcenter
+      # ];
     };
   };
 
