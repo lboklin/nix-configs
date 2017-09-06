@@ -1,0 +1,154 @@
+<configuration version="19">
+    <folder id="nexus_5x foton" label="AekiKamera" path="/home/ludvig/Cloud/GobiCamera/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="L4T444J-WKECBOB-VIB5P7F-2V7MC5W-WCDSXE7-JU7R6WX-R3JMW7W-JYFETQ5" introducedBy=""></device>
+        <device id="Q7XRFRV-MMJA5L6-NE66PFJ-6E3TXRD-24QVCOH-MQN6MZ4-DSUVYCZ-L3T4EQY" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>true</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="nexus_5x-photos" label="Camera" path="/home/ludvig/Cloud/Camera/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="HIHCDAU-C7FL4WA-LWY64AN-QM3N6QM-ALTK7CY-3I42ZAD-BBMAGSF-4W5YXAQ" introducedBy=""></device>
+        <device id="L4T444J-WKECBOB-VIB5P7F-2V7MC5W-WCDSXE7-JU7R6WX-R3JMW7W-JYFETQ5" introducedBy=""></device>
+        <device id="Q7XRFRV-MMJA5L6-NE66PFJ-6E3TXRD-24QVCOH-MQN6MZ4-DSUVYCZ-L3T4EQY" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>false</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="Gobi" label="Gobi" path="/home/ludvig/Cloud/Gobi/" type="readwrite" rescanIntervalS="60" ignorePerms="false" autoNormalize="true">
+        <device id="HIHCDAU-C7FL4WA-LWY64AN-QM3N6QM-ALTK7CY-3I42ZAD-BBMAGSF-4W5YXAQ" introducedBy=""></device>
+        <device id="I3EDID7-FTUYMMI-UDQWWKZ-LYEGDRT-P6YYGD6-WWP5YIK-5XSAJXX-DJRG5AA" introducedBy=""></device>
+        <device id="L4T444J-WKECBOB-VIB5P7F-2V7MC5W-WCDSXE7-JU7R6WX-R3JMW7W-JYFETQ5" introducedBy=""></device>
+        <device id="Q7XRFRV-MMJA5L6-NE66PFJ-6E3TXRD-24QVCOH-MQN6MZ4-DSUVYCZ-L3T4EQY" introducedBy=""></device>
+        <minDiskFreePct>1</minDiskFreePct>
+        <versioning></versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>false</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <folder id="Personal" label="" path="~/Cloud/Personal/" type="readwrite" rescanIntervalS="30" ignorePerms="false" autoNormalize="false">
+        <device id="HIHCDAU-C7FL4WA-LWY64AN-QM3N6QM-ALTK7CY-3I42ZAD-BBMAGSF-4W5YXAQ" introducedBy=""></device>
+        <device id="L4T444J-WKECBOB-VIB5P7F-2V7MC5W-WCDSXE7-JU7R6WX-R3JMW7W-JYFETQ5" introducedBy=""></device>
+        <device id="6X5WME7-773WJWD-FYEXK6F-CM6QOY2-76ZYKTJ-W6RM3PA-DMGXVL4-CUUALAS" introducedBy=""></device>
+        <minDiskFreePct>0</minDiskFreePct>
+        <versioning type="staggered">
+            <param key="versionsPath" val=""></param>
+            <param key="cleanoutDays" val="0"></param>
+            <param key="command" val=""></param>
+            <param key="keep" val="10"></param>
+            <param key="maxAge" val="15552000"></param>
+        </versioning>
+        <copiers>0</copiers>
+        <pullers>0</pullers>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerSleepS>0</pullerSleepS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>0</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <fsync>false</fsync>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+    </folder>
+    <device id="HIHCDAU-C7FL4WA-LWY64AN-QM3N6QM-ALTK7CY-3I42ZAD-BBMAGSF-4W5YXAQ" name="Bito5X" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+    </device>
+    <device id="I3EDID7-FTUYMMI-UDQWWKZ-LYEGDRT-P6YYGD6-WWP5YIK-5XSAJXX-DJRG5AA" name="BitaMSI" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+    </device>
+    <device id="L4T444J-WKECBOB-VIB5P7F-2V7MC5W-WCDSXE7-JU7R6WX-R3JMW7W-JYFETQ5" name="blacktower" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+    </device>
+    <device id="Q7XRFRV-MMJA5L6-NE66PFJ-6E3TXRD-24QVCOH-MQN6MZ4-DSUVYCZ-L3T4EQY" name="Bita5X" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+    </device>
+    <device id="6X5WME7-773WJWD-FYEXK6F-CM6QOY2-76ZYKTJ-W6RM3PA-DMGXVL4-CUUALAS" name="BitoMSI" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+    </device>
+    <gui enabled="true" tls="false" debugging="false">
+        <address>127.0.0.1:8384</address>
+        <apikey>HFzIYiiVYGG3tVWAzTMBZi6p-kZJ8FsL</apikey>
+        <theme>default</theme>
+    </gui>
+    <options>
+        <listenAddress>default</listenAddress>
+        <globalAnnounceServer>default</globalAnnounceServer>
+        <globalAnnounceEnabled>true</globalAnnounceEnabled>
+        <localAnnounceEnabled>true</localAnnounceEnabled>
+        <localAnnouncePort>21027</localAnnouncePort>
+        <localAnnounceMCAddr>[ff12::8384]:21027</localAnnounceMCAddr>
+        <maxSendKbps>0</maxSendKbps>
+        <maxRecvKbps>0</maxRecvKbps>
+        <reconnectionIntervalS>60</reconnectionIntervalS>
+        <relaysEnabled>true</relaysEnabled>
+        <relayReconnectIntervalM>10</relayReconnectIntervalM>
+        <startBrowser>true</startBrowser>
+        <natEnabled>true</natEnabled>
+        <natLeaseMinutes>60</natLeaseMinutes>
+        <natRenewalMinutes>30</natRenewalMinutes>
+        <natTimeoutSeconds>10</natTimeoutSeconds>
+        <urAccepted>2</urAccepted>
+        <urUniqueID>rsTLEBgY</urUniqueID>
+        <urURL>https://data.syncthing.net/newdata</urURL>
+        <urPostInsecurely>false</urPostInsecurely>
+        <urInitialDelayS>1800</urInitialDelayS>
+        <restartOnWakeup>true</restartOnWakeup>
+        <autoUpgradeIntervalH>12</autoUpgradeIntervalH>
+        <upgradeToPreReleases>false</upgradeToPreReleases>
+        <keepTemporariesH>24</keepTemporariesH>
+        <cacheIgnoredFiles>false</cacheIgnoredFiles>
+        <progressUpdateIntervalS>5</progressUpdateIntervalS>
+        <symlinksEnabled>true</symlinksEnabled>
+        <limitBandwidthInLan>false</limitBandwidthInLan>
+        <minHomeDiskFreePct>1</minHomeDiskFreePct>
+        <releasesURL>https://upgrades.syncthing.net/meta.json</releasesURL>
+        <overwriteRemoteDeviceNamesOnConnect>false</overwriteRemoteDeviceNamesOnConnect>
+        <tempIndexMinBlocks>10</tempIndexMinBlocks>
+        <trafficClass>0</trafficClass>
+        <weakHashSelectionMethod>auto</weakHashSelectionMethod>
+    </options>
+</configuration>

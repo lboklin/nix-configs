@@ -8,29 +8,19 @@
     [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "ehci_pci" "ata_piix" "ahci" "pata_jmicron" "xhci_pci" "firewire_ohci" "usb_storage" "usbhid" "uas" "sd_mod" ];
+  boot.initrd.supportedFilesystems = [ "btrfs" ];
+  boot.supportedFilesystems = [ "btrfs" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/0e5c2a2b-9a01-4c92-891f-3364ea39f4e3";
+    { device = "/dev/disk/by-label/nixos";
       fsType = "ext4";
     };
 
-  fileSystems."/data/neon" =
-    { device = "/dev/disk/by-uuid/b809c423-b73b-4585-b9d9-37285cda2817";
-      fsType = "ext4";
-    };
+  swapDevices = [ { device = "/dev/disk/by-label/swap"; } ];
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/D71D-D5D0";
-      fsType = "vfat";
-    };
-
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/b4b14c25-0a6b-498b-8e79-2107c5955b4c"; }
-    ];
-
-  nix.maxJobs = lib.mkDefault 4;
-  powerManagement.cpuFreqGovernor = "powersave";
+  nix.maxJobs = lib.mkDefault 8;
+  powerManagement.cpuFreqGovernor = "ondemand";
 }

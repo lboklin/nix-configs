@@ -6,11 +6,34 @@
     ./hardware-configuration.nix
   ];
 
-  ## Storage devices ##
+  # Storage devices
+  boot.loader.grub = {
+    enable = true;
+    version = 2;
+    # Define on which hard drive you want to install Grub.
+    device = "/dev/sdb"; # or "nodev" for efi only
+    useOSProber = true;
+  };
 
-  boot.loader.systemd-boot.enable = true;
+  fileSystems = {
+    "/data" = {
+      device = "/dev/disk/by-label/data";
+      fsType = "ext4";
+    };
+
+    "/data/neon-home" = {
+      device = "/dev/disk/by-label/Home";
+      fsType = "ext4";
+    };
+  };
 
   services.xserver = {
+    # Graphics card.
+    videoDrivers = [ "nvidia" ];
+    extraDisplaySettings = ''
+      Option         "metamodes" "DVI-D-0: 1920x1080_144 +0+0 {ForceCompositionPipeline=On}"
+    '';
+
     # Keyboard.
     layout = "se";
     xkbVariant = "dvorak_a5";

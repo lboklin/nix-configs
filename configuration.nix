@@ -11,6 +11,8 @@
     ./users.nix
   ];
 
+  boot.plymouth.enable = true;
+
   # Need this for graphics drivers, steam, etc.
   nixpkgs.config.allowUnfree = true;
 
@@ -45,6 +47,13 @@
     opengl.driSupport32Bit = true;
   };
 
+  services.syncthing = {
+    enable = true;
+    dataDir = /etc/nixos/extra/syncthing;
+    openDefaultPorts = true;
+    useInotify = true;
+  };
+
   # Extra system packages.
   environment.systemPackages = with pkgs; [
     # Misc/General
@@ -60,6 +69,7 @@
     keepassx2
     konsole
     openvpn
+    nox
     powerline-fonts
     pulseaudioFull
     redshift
@@ -75,11 +85,11 @@
     ctags
     darcs
     git
+    nodejs
+    npm2nix
     meld
-    # Haskell dev
     cabal2nix
     ghc
-    # ghci-ng
 
     # Editors/IDE's
     emacs
@@ -99,10 +109,12 @@
     wget
   ];
 
+  # nix.nixPath = [ "/etc/nixos" "nixos-config=/etc/nixos/configuration.nix" ];
+
   # Keep system up-to-date automatically.
-  system.autoUpgrade.enable = true;
+  system.autoUpgrade.enable = false;
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  #system.stateVersion = "17.03";
-  system.stateVersion = "nixpkgs-unstable";
+  system.stateVersion = "17.09";
+  # system.stateVersion = "nixpkgs-unstable";
 }

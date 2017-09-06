@@ -8,7 +8,7 @@
       enable = true;
       displayManager.sddm = {
         enable = true;
-        # autoLogin.enable = true;
+        autoLogin.enable = true;
         autoLogin.user = "ludvig";
         autoNumlock = true;
       };

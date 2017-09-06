@@ -59,8 +59,9 @@
   };
 
   environment.shellAliases = {
-    g = "rg -i";
-    l = "ls -lhAF --group-directories-first --color";
+    # Nix
+    snix      = ''nix-env -qaP --description | g'';
+    hsnix     = ''nix-env -qaPA --description nixpkgs.haskellPackages | g'';
 
     # Git
     gcm = "git commit -m";
