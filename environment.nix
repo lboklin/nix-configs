@@ -3,6 +3,7 @@
 {
   # Choose one DE/WM.
   imports = [
+    # ./i3.nix
     ./kde.nix
     # ./xmonad.nix
     ];

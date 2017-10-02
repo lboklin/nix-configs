@@ -11,10 +11,13 @@
     ./users.nix
   ];
 
+  # No hackerman bootup screen.
+  boot.plymouth.enable = true;
+
   # Need this for graphics drivers, steam, etc.
   nixpkgs.config.allowUnfree = true;
 
-  # Needed by Unity3D
+  # Needed by Unity3D.
   security.chromiumSuidSandbox.enable = true;
 
   # Select internationalisation properties.
@@ -65,7 +68,7 @@
     redshift
     smplayer
     source-code-pro
-    spotify # Unfree
+    #spotify # Unfree
     steam # Unfree
     tdesktop
     tmux
@@ -104,5 +107,6 @@
 
   # The NixOS release to be compatible with for stateful data such as databases.
   #system.stateVersion = "17.03";
-  system.stateVersion = "nixpkgs-unstable";
+  #system.stateVersion = "nixos-unstable";
+  system.stateVersion = "17.09";
 }

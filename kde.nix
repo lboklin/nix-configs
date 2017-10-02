@@ -20,6 +20,10 @@
     # ];
   };
 
+  # Workaround for https://github.com/NixOS/nixpkgs/issues/27050
+  environment.variables.QT_PLUGIN_PATH = [ "${pkgs.plasma-desktop}/lib/qt-5.9/plugins/kcms" ];
+
+
   environment.systemPackages = with pkgs; [
     kdeconnect
     kwalletmanager
